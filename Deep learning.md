@@ -45,7 +45,7 @@ the key is to choose appropriate solution based on your problem. e.g getting mor
 back in the pre-deep learning era, we didn't have many tools, we didn't have as many tools that just reduce bias or that just reduce variance without hurting the other one. But in the modern deep learning, big data era, so long as you can keep training a bigger network, and so long as you can keep getting more data, which isn't always the case for either of these, but if that's the case, then getting a bigger network almost always just reduces your bias without necessarily hurting your variance, so long as you regularize appropriately. And getting more data pretty much always reduces your variance and doesn't hurt your bias much. So what's really happened is that, with these two steps, the ability to train, pick a network, or get more data, we now have tools to drive down bias and just drive down bias, or drive down variance and just drive down variance, without really hurting the other thing that much. And I think this has been one of the big reasons that deep learning has been so useful for supervised learning, that there's much less of this tradeoff where you have to carefully balance bias and variance, but sometimes you just have more options for reducing bias or reducing variance without necessarily increasing the other one as long as you have a well regularized network
 
 ### regularization
-L2 regularization:  + \frac{ \lambda}{2m} \times \left \| w \right \|^{2}
+L2 regularization:   \frac{ \lambda}{2m} \times \left \| w \right \|^{2}
 
 # ML strategy
 
