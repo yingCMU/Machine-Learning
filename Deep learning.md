@@ -51,7 +51,7 @@ for linear regression:
 
 for NN:
 1. <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\sum_{l=1}^{L}\left\|w^{[l]]}\right\|^{2}" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|^{2}" />
-
+\left\|w^{[l]]}\right\|^{2} = \left\|w^{[l]]}\right\|^{2}
 
 # ML strategy
 
