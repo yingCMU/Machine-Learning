@@ -48,6 +48,7 @@ back in the pre-deep learning era, we didn't have many tools, we didn't have as 
 for linear regression:
 1. L2 regularization:   <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\left\|w\right\|^{2}" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|^{2}" />
 2. L1 regularization:   <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\left\|w\right\|" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|" />
+
 for NN:
 1. <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\sum_{l=1}^{L}\left\|w^{[l]]}\right\|^{2}" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|^{2}" />
 
