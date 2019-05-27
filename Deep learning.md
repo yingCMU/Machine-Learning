@@ -46,10 +46,10 @@ back in the pre-deep learning era, we didn't have many tools, we didn't have as 
 
 ### regularization
 for linear regression:
-L2 regularization:   <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\left\|w\right\|^{2}" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|^{2}" />
-L1 regularization:   <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\left\|w\right\|" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|" />
+1. L2 regularization:   <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\left\|w\right\|^{2}" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|^{2}" />
+2. L1 regularization:   <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\left\|w\right\|" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|" />
 for NN:
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\sum_{l=1}^{L}\left\|w^{[l]]}\right\|^{2}" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|^{2}" />
+1. <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{\lambda}{2m}\times\sum_{l=1}^{L}\left\|w^{[l]]}\right\|^{2}" title="\Large x=\frac{ \lambda}{2m} \times \left \| w \right \|^{2}" />
 
 
 # ML strategy
