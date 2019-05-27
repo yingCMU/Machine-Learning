@@ -55,6 +55,9 @@ underfitting
 not taking into account how the model handles extrapolation and interpolation: 
 - offline training limitation:
 offline testing often has too many assumptions, e.g. in our case it was limited to re-ranking what users clicked and not the entire inventory, we conducted an online experiment, i.e. A/B test, as our next step. We compared the Stage 1 ML model to the rule-based random ranking in terms of number of bookings.
+- mismatch of test and test distribution
+e.g. training set is from cat pictures from webpages, but test set is cat picture from user upload on mobile. The resolution is different. They are from different distribution
+make sure data sets are from the same distribution
 
 # workflow
 ### For shared entities(like Airbnb experience ranking):
