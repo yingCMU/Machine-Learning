@@ -29,13 +29,23 @@ assuming human classification is almost 0%
 when will high bias and high variance happen: high bias in some regions and high variance in other regions, caused by too much flexibility in model
 
 ## recipie 
-1. has high bias?
+1. first do you have high bias?
 to get rid of bias training problem:
 - try bigger network, more layers, more hidden units
 - train longer
 - try more advanced optimization algorithm
 - try better/advanced NN architecture
 if human can do well, try abovel but if it is blured which means human can not do well, this probably won't help much
+2. after fixing bias, do you have high variance？
+- get more data
+- regularization
+- find better NN architecture
+at this point, you need to iterate through step 1 and 2 util you find low bias and low variance method
+the key is to choose appropriate solution based on your problem. e.g getting more data will not solve high bias problem.
+back in the pre-deep learning era, we didn't have many tools, we didn't have as many tools that just reduce bias or that just reduce variance without hurting the other one. But in the modern deep learning, big data era, so long as you can keep training a bigger network, and so long as you can keep getting more data, which isn't always the case for either of these, but if that's the case, then getting a bigger network almost always just reduces your bias without necessarily hurting your variance, so long as you regularize appropriately. And getting more data pretty much always reduces your variance and doesn't hurt your bias much. So what's really happened is that, with these two steps, the ability to train, pick a network, or get more data, we now have tools to drive down bias and just drive down bias, or drive down variance and just drive down variance, without really hurting the other thing that much. And I think this has been one of the big reasons that deep learning has been so useful for supervised learning, that there's much less of this tradeoff where you have to carefully balance bias and variance, but sometimes you just have more options for reducing bias or reducing variance without necessarily increasing the other one as long as you have a well regularized network
+
+### regularization
+L2 regularization: Y/(2m)||w^2||    h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
 
 # ML strategy
 
