@@ -1,10 +1,23 @@
-
 # Hyperparameter tuning, Regularization and Optimization
 highly iterative process
 - how many layers
 - how many hidden units
 - learning rate
 - activation function
+
+## improve model performance
+1.  First, is that you can fit the training set pretty well, and you can think of this as roughly saying that you can achieve low avoidable bias.  (human error -> train error) solutions:
+- train bigger network
+- train longer/ better optimization algorithm: such as ADS momentum or RMSprop, Adam,
+- better NN architecture/hyper parameters serach:  this could include everything from changing the activation function to changing the number of layers or hidden units. Recur NN, and Conv NN
+2. And the second thing you're assuming you can do well, is that doing well on the training set generalizes pretty well to the dev set or the test set(train error -> dev error)
+- more data
+- regularization
+	- L2 regularization
+	- drop out
+	- data augmentation
+- better NN architecture/hyper parameters serach: you can also try various NN architecture/hyperparameters search to see if that can help you find a neural network architecture that is better suited for your problem. I think that this notion of bias or avoidable bias 
+
 
 ## Train / Dev / Test sets
 Dev set: holdout, cross-validation. for model selection
@@ -129,3 +142,13 @@ why it slows down after passing human-level performance?
  - avoidable bias: gap bettwen train error and human level error
  - reduce viarance: gap between dev error and train error
 
+for problems where the data is noisy, like speech recognition on very noisy audio where it's just impossible sometimes to hear what was said and to get the correct transcription. For problems like that, having a better estimate for Bayes error can help you better estimate avoidable bias and variance. And therefore make better decisions on whether to focus on bias reduction tactics, or on variance reduction tactics.
+
+### surpassing human-level performance
+once you surpass that:
+1.you actually don't have enough information to tell if you should focus on reducing bias or reducing variance in your algorithm. So that slows down the efficiency where you should make progress. 
+2. Moreover, if your error is already better than even a team of humans looking at and discussing and debating the right label, for an example, then it's just also harder to rely on human intuition to tell your algorithm what are ways that your algorithm could still improve the performance
+
+
+
+ # error analysis
