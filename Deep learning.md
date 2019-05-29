@@ -35,6 +35,7 @@ by comparing traing and test error , you will differenciate
 high bias: when underfitting
 high variance: when overfitting
 assuming human classification is almost 0%
+
 |   train error     | test error | cause |
 | :-----------: |:-------------:| :-----:|
 |  1%    | 10% | high variance |
