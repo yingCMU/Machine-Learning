@@ -151,4 +151,17 @@ once you surpass that:
 
 
 
- # error analysis
+# error analysis
+## estimate upper bound
+ If you're trying to get a learning algorithm to do a task that humans can do. And if your learning algorithm is not yet at the performance of a human. Then manually examining mistakes that your algorithm is making, can give you insights into what to do next. maybe your teammate comes to you with a proposal for how to make the algorithm do better, specifically on dogs, right? You can imagine building a focus effort, maybe to collect more dog pictures, or maybe to design features specific to dogs, or something. In order to make your cat classifier do better on dogs, so it stops misrecognizing these dogs as cats. So the question is, should you go ahead and start a project focus on the dog problem?
+ Before proceeding, try to estimate your upper bound limit/predict the impact: 
+get about 100 mislabeled dev set examples, then examine them manually. Just count them up one at a time, to see how many of these mislabeled examples in your dev set are actually pictures of dogs. Now, suppose that it turns out that 5% of your 100 mislabeled dev set examples are pictures of dogs. Of a typical set of 100 examples you're getting wrong, even if you completely solve the dog problem, you only get 5 out of 100 more correct. Then the best you could easily hope to do, if you spend a lot of time on the dog problem. Is that your error might go down from 10% error, down to 9.5% error, right? So this a 5% relative decrease in error, from 10% down to 9.5%.
+## evaluate multiple ideas in parallel
+ideas for cat classification to be evaluated:
+1. fix pictures of dogs being categorized as cat
+2. fix great cats(lions, panthers, etc) miscatogarized
+3. improve performance on blurry images
+Images | dog(1)| great cats (2)| blurry(3)| Comments| 
+-------|-------|-------|-------|
+1| Y ||| pitball|
+2|||Y||
