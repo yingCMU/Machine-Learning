@@ -161,7 +161,8 @@ ideas for cat classification to be evaluated:
 1. fix pictures of dogs being categorized as cat
 2. fix great cats(lions, panthers, etc) miscatogarized
 3. improve performance on blurry images
+
 Images | dog(1)| great cats (2)| blurry(3)| Comments| 
--------|-------|-------|-------|
+-------|-------|-------|-------|-------|
 1| Y ||| pitball|
 2|||Y||
