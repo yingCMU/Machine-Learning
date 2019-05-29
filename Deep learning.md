@@ -94,3 +94,38 @@ Another e.g： wakeup word
 'Hi Alexa'
 Maximising: accuracy
 satisfying metirc: <=1 false positive every 24 hours
+
+## setup train/dev/test data set to maximize efficiency
+e.g if data from different regions, US,UK,China...
+using some region as dev and others as test because data is from different distribution. This would mean your optimization on dev set won't generalize well on test set.
+The solution is to randomly shuffle the data
+Always choose dev and test set (from same distribution)to reflect data you expect to get in the future and consider important to do well on
+### size of dev/test set
+if you have 1 million data, 1% dev 1% test may be enough (10k each)
+set your test set to be big enough to give high confidence in the overall performance of the system
+### When to change dev/test sets and metrics
+If what your metric prefers is different from what you prefer, you may consider changing metrics and refining metrics.
+e.g cat image classifier, your metric is error rate. But it is not acceptable to see porn images. So you can update your error metrics to be higher weight if it is porn images.
+
+## Compare to human-level performance
+why?
+1. First is that because of advances in deep learning, machine learning algorithms are suddenly working much better and so it has become much more feasible in a lot of application areas for machine learning algorithms to actually become competitive with human-level performance. 
+2. Second, it turns out that the workflow of designing and building a machine learning system, **the workflow is much more efficient when you're trying to do something that humans can also do**. So in those settings, it becomes natural to talk about comparing, or trying to mimic human-level performance. Let's see a couple examples of what this means.
+ after surpassing human level performance it can still get better, but the slope slows down. And the hope is it achieves some theoretical optimum level of performance. Bayes optimal error (Bayes error)  is the very best theoretical function for mapping from x to y.
+
+why it slows down after passing human-level performance?
+1.  One reason is that human level performance is for many tasks not that far from Bayes' optimal error. People are very good at looking at images and telling if there's a cat or listening to audio and transcribing it. So, by the time you surpass human level performance maybe there's not that much head room to still improve.
+2. But the second reason is that so long as your performance is worse than human level performance, then there are actually certain tools you could use to improve performance that are harder to use once you've surpassed human level performance. So here's what I mean. For tasks that humans are quite good at, and this includes looking at pictures and recognizing things, or listening to audio, or reading language, really natural data tasks humans tend to be very good at.
+  -  get labeled data: For tasks that humans are good at, so long as your machine learning algorithm is still worse than the human, you can get labeled data from humans. That is you can ask people, ask higher humans, to label examples for you so that you can have more data to feed your learning algorithm. Something we'll talk about next week is manual error analysis.
+  -  manual error analysis: But so long as humans are still performing better than any other algorithm, you can ask people to look at examples that your algorithm's getting wrong, and try to gain insight in terms of why a person got it right but the algorithm got it wrong. And we'll see next week that this helps improve your algorithm's performance.
+  - better analysis of bias/variance: And you can also get a better analysis of bias and variance which we'll talk about in a little bit. But so long as your algorithm is still doing worse then humans you have these important tactics for improving your algorithm. Whereas once your algorithm is doing better than humans, then these three tactics are harder to apply.
+
+### Avoidable bias
+ you don't actually want to do too well and knowing what human level performance is, can tell you exactly how well but not too well you want your algorithm to do on the training set. e.g. if your classifer has 8% training error and 10% dev error, but human error is 1%, this means you need to improve your training first to reduce bias.
+ But if human error is 7.5%, maybe data set is so blured so even human can't tell. This means you need to focus reducing variance.
+ For CV task, it is reasonable to assume humna error as a proxy for Bayes error because human is really good at CV
+
+ to summarize:
+ - avoidable bias: gap bettwen train error and human level error
+ - reduce viarance: gap between dev error and train error
+
